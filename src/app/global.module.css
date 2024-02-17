@@ -1,0 +1,16 @@
+.global {
+  color: #363636;
+  padding: 0;
+  margin: 0;
+}
+
+button.noStyleButton {
+  outline: none;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+button.noStyleButton:hover {
+  background: none;
+}

@@ -1,5 +1,7 @@
+import { combineClassNames } from "@/util";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
+import globalStyles from "./global.module.css";
 
 const inter = Ubuntu_Mono({ weight: "400", subsets: ["latin"] });
 
@@ -15,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/images/favicon.ico" sizes="any" />
-      <body className={inter.className}>{children}</body>
+      <body className={combineClassNames(inter.className, globalStyles.global)}>
+        {children}
+      </body>
     </html>
   );
 }

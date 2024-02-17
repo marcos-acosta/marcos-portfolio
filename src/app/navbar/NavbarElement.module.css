@@ -1,3 +1,35 @@
 .selectedKey {
   font-weight: bold;
 }
+
+.navbarElementContainer {
+  font-size: 1.8vw;
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.navbarTitle {
+  background-color: #f6f6f6ff;
+  padding: 0.75vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+.navbarTitle.selected {
+  background-color: #ffe599ff;
+  cursor: initial;
+}
+
+.navbarKeyDisplay {
+  margin-right: 1vw;
+  padding-top: 0.75vw;
+}
+
+.navbarKeyDisplay.selected {
+  font-style: italic;
+  font-weight: bold;
+}

@@ -1,5 +1,6 @@
 import { combineClassNames } from "@/util";
 import styles from "./NavbarElement.module.css";
+import globalStyles from "../global.module.css";
 import React from "react";
 
 interface NavbarElementProps {
@@ -15,16 +16,16 @@ export default function NavbarElement(props: NavbarElementProps) {
       <div
         className={combineClassNames(
           styles.navbarKeyDisplay,
-          props.isSelected && styles.selectedKey
+          props.isSelected && styles.selected
         )}
       >
         {props.keyHook}
       </div>
-      <button onClick={props.callback} className={styles.noStyleButton}>
+      <button onClick={props.callback} className={globalStyles.noStyleButton}>
         <div
           className={combineClassNames(
             styles.navbarTitle,
-            props.isSelected && styles.selectedTitle
+            props.isSelected && styles.selected
           )}
         >
           {props.title}

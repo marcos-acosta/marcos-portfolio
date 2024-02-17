@@ -52,9 +52,9 @@ export default function Controller() {
   useKeyboardControl(keyboardHooks);
 
   return (
-    <div>
+    <>
       <Navbar pages={PAGE_DATA} selectedPage={portfolioPage} />
       {MAIN_WINDOW_COMPONENT_MAP[portfolioPage.toString()]}
-    </div>
+    </>
   );
 }
