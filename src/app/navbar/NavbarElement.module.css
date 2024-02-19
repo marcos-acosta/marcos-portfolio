@@ -1,7 +1,3 @@
-.selectedKey {
-  font-weight: bold;
-}
-
 .navbarElementContainer {
   font-size: 1.8vw;
   width: 15vw;
@@ -30,6 +26,5 @@
 }
 
 .navbarKeyDisplay.selected {
-  font-style: italic;
   font-weight: bold;
 }

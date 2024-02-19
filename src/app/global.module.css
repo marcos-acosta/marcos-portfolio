@@ -14,3 +14,10 @@ button.noStyleButton {
 button.noStyleButton:hover {
   background: none;
 }
+
+a.link {
+  color: gray;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
