@@ -1,28 +1,57 @@
-import React from "react";
-import { PageData, PortfolioPage } from "../page";
+"use client";
+
+import React, { useState } from "react";
 import NavbarElement from "./NavbarElement";
 import styles from "./Navbar.module.css";
+import useKeyboardControl, { KeyboardHook } from "react-keyboard-control";
+import { useRouter } from "next/navigation";
 
-interface NavbarProps {
-  pages: PageData[];
-  selectedPage: PortfolioPage;
+export enum PortfolioPage {
+  HOME = "home",
+  ABOUT_ME = "about",
+  CODING = "coding",
+  MUSIC = "music",
+  PICTURES = "pictures",
+  WRITING = "writing",
 }
 
-export default function Navbar(props: NavbarProps) {
+export interface PageMenuData {
+  pageName: string;
+  pageHref: string;
+  keyhook: string;
+  callback: () => void;
+}
+
+export default function Navbar() {
+  const router = useRouter();
+
+  const PAGES: PageMenuData[] = [
+    {
+      pageName: "home",
+      pageHref: PortfolioPage.HOME,
+      keyhook: "h",
+      callback: () => router.push(`/${PortfolioPage.HOME}`),
+    },
+    {
+      pageName: "about me",
+      pageHref: PortfolioPage.ABOUT_ME,
+      keyhook: "a",
+      callback: () => router.push(`/${PortfolioPage.ABOUT_ME}`),
+    },
+  ];
+
+  const keyboardHooks: KeyboardHook[] = PAGES.map((pageData) => ({
+    keyboardEvent: { key: pageData.keyhook },
+    callback: pageData.callback,
+  }));
+  useKeyboardControl(keyboardHooks);
+
   return (
     <div className={styles.navbarContainer}>
       <div>
-        {props.pages.map((pageData) => (
-          <div
-            className={styles.navbarElementContainer}
-            key={pageData.page.toString()}
-          >
-            <NavbarElement
-              isSelected={props.selectedPage === pageData.page}
-              keyHook={pageData.key}
-              title={pageData.page.toString()}
-              callback={pageData.callback}
-            />
+        {PAGES.map((page) => (
+          <div className={styles.navbarElementContainer} key={page.pageName}>
+            <NavbarElement {...page} />
           </div>
         ))}
       </div>

@@ -53,7 +53,7 @@ export default function AboutMe() {
                 Right now, I'm based in New York City, working as a Software
                 Engineer at{" "}
                 <a
-                  href="https://www.bing.com/"
+                  href="https://duckduckgo.com/"
                   className={globalStyles.link}
                   target="_blank"
                 >
