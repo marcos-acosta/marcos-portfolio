@@ -1,8 +1,8 @@
 import { combineClassNames } from "@/util";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
-import globalStyles from "./global.module.css";
-import Navbar from "./navbar/Navbar";
+import globalStyles from "./../global.module.css";
+import Navbar from "../components/navbar/Navbar";
 
 const inter = Ubuntu_Mono({ weight: "400", subsets: ["latin"] });
 

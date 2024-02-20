@@ -1,6 +1,6 @@
 import { combineClassNames } from "@/util";
 import styles from "./NavbarElement.module.css";
-import globalStyles from "../global.module.css";
+import globalStyles from "../../global.module.css";
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -38,6 +38,30 @@ export default function Navbar() {
       keyhook: "a",
       callback: () => router.push(`/${PortfolioPage.ABOUT_ME}`),
     },
+    {
+      pageName: "coding",
+      pageHref: PortfolioPage.CODING,
+      keyhook: "c",
+      callback: () => router.push(`/${PortfolioPage.CODING}`),
+    },
+    {
+      pageName: "music",
+      pageHref: PortfolioPage.MUSIC,
+      keyhook: "m",
+      callback: () => router.push(`/${PortfolioPage.MUSIC}`),
+    },
+    {
+      pageName: "pictures",
+      pageHref: PortfolioPage.PICTURES,
+      keyhook: "p",
+      callback: () => router.push(`/${PortfolioPage.PICTURES}`),
+    },
+    {
+      pageName: "writing",
+      pageHref: PortfolioPage.WRITING,
+      keyhook: "w",
+      callback: () => router.push(`/${PortfolioPage.WRITING}`),
+    },
   ];
 
   const keyboardHooks: KeyboardHook[] = PAGES.map((pageData) => ({
