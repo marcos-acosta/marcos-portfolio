@@ -22,12 +22,6 @@
   box-sizing: border-box;
 }
 
-.selfImage {
-  width: 18vw;
-  height: 18vw;
-  border-radius: 0.8vw;
-}
-
 .nameContainer {
   font-size: 2.7vw;
   margin-top: 0.5vw;
