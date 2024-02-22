@@ -4,6 +4,8 @@ import globalStyles from "../../global.module.css";
 
 const MUDD_URL =
   "https://www.google.com/maps/place/Harvey+Mudd+College/@34.1060906,-117.711218,17z/data=!3m1!4b1!4m6!3m5!1s0x80c331b99201d84f:0x24fab94d0a391365!8m2!3d34.1060906!4d-117.7086431!16zL20vMDNsY3Y?entry=ttu";
+const RESUME_URL =
+  "https://docs.google.com/document/d/1_9WK_V2MZsDRiUeYojiAqk3xPaMgX_q9IFnQQc2sWqM/edit?usp=sharing";
 
 export default function AboutMe() {
   return (
@@ -19,7 +21,14 @@ export default function AboutMe() {
             <div className={styles.aboutMeTitle}>About me</div>
             <div className={styles.resumeText}>
               (If you're just looking for a resume,{" "}
-              <a className={globalStyles.link}>here's one</a>)
+              <a
+                className={globalStyles.link}
+                target="_blank"
+                href={RESUME_URL}
+              >
+                here's one
+              </a>
+              )
             </div>
             <div className={styles.aboutMeParagraphs}>
               <p>
